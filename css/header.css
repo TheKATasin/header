@@ -1,0 +1,506 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul,
+ol {
+    list-style-type: none;
+}
+
+/* All common css end */
+/* Header part start */
+#header_part {
+    padding: 50px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+.nav_menuset_one ul li {
+    display: inline-block;
+    padding-top: 22px;
+}
+
+.nav_menuset_two ul li {
+    display: inline-block;
+    padding-top: 22px;
+}
+
+.nav_menuset_one ul li a {
+    position: relative;
+    padding-right: 30px;
+    font-family: 'Jost', sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.nav_menuset_two ul li a span {
+    font-size: 18px;
+    padding-left: 3px;
+    position: relative;
+}
+
+.nav_menuset_two ul li a {
+    padding-left: 50px;
+    color: #fff;
+}
+
+.nav_menuset_two ul li a span::after {
+    content: "";
+    position: absolute;
+    height: 50px;
+    width: 1px;
+    top: 50%;
+    right: -30px;
+    background: #CCCCCA;
+    transform: translateY(-50%);
+}
+
+.nav_menuset_one ul li a i {
+    font-size: 12px;
+}
+
+.nav_menuset_two ul li a i {
+    font-size: 22px;
+}
+
+.logo_part img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* header mod for scroll */
+.change_bg {
+    background: rgb(0, 0, 0, 0.8);
+    animation: changes 0.5s;
+    transition: ease-in-out 0.5s;
+    padding: 16px 0 !important;
+}
+
+.special_padding_one {
+    padding-top: 30px !important;
+    animation: changes 0.5s;
+    transition: ease-in-out 0.5s;
+}
+
+.special_padding_two {
+    padding-top: 30px !important;
+    animation: changes 0.5s;
+    transition: ease-in-out 0.5s;
+}
+
+@keyframes hc {
+    form {
+        top: -50px
+    }
+
+    to {
+        top: 0px;
+    }
+}
+
+/* header mods for scroll */
+.btn-toggle {
+    background: transparent;
+    width: 40px;
+    padding: 5px;
+    float: right;
+    margin-top: -86px;
+    border: none;
+    outline: none;
+    transition: all .5s ease;
+    display: none;
+}
+
+.btn-toggle:hover {
+    background: #fff;
+}
+
+.btn-toggle:hover span {
+    background: #a29d9d;
+    transform: scale(0.8);
+}
+
+.btn-toggle span:nth-child(1) {
+    margin-top: 0px;
+}
+
+.btn-toggle span {
+    background: #fff;
+    display: block;
+    margin-top: 6px;
+    padding: 2px;
+    border-radius: 5px;
+    transition: all .5s ease;
+    transform: scale(1);
+}
+
+/* Header part end */
+
+/* Banner part start */
+#banner_part {
+    position: relative;
+}
+
+.slide {
+    padding: 322px 0;
+    background: url(../images/human1.jpg) no-repeat;
+    background-position: left bottom;
+    /* background-size: 2000px; */
+    animation: slide 16000ms linear infinite;
+}
+
+@keyframes slide {
+    100% {
+        background-position-x: -25px;
+        background-position-y: -25px;
+        background-size: 110%;
+    }
+
+    50% {
+        background-position-x: 0;
+        background-position-y: 0;
+        background-size: 120%;
+    }
+
+    0% {
+        background-position-x: -25px;
+        background-position-y: -25px;
+        background-size: 110%;
+    }
+}
+
+.one {
+    background: url(../images/shoe.jpg) no-repeat center;
+    background-size: cover;
+}
+
+.two {
+    background: url(../images/human2.jpg) no-repeat center;
+    background-size: cover;
+}
+
+.slick-dots {
+    display: flex;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-left: 0 !important;
+}
+
+.slick-dots button {
+    position: relative;
+    text-indent: -9999px;
+    height: 4px;
+    width: 4px;
+    margin: 30px;
+    border: 0;
+    border-radius: 50%;
+}
+
+li.slick-active button::before {
+    position: absolute;
+    content: "";
+    bottom: -8px;
+    left: -8px;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background: transparent;
+    border: 1px solid white;
+}
+
+.slick-dots button::after {
+    position: absolute;
+    content: "";
+    bottom: -8px;
+    left: -8px;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background: transparent;
+    border: 1px solid white;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.slick-dots button:hover:after {
+    opacity: 1;
+}
+
+/* banner text */
+.slide_one_text h1 {
+    font-family: 'Jost', sans-serif;
+    font-weight: 300;
+    font-size: 65px;
+    padding-top: 40px;
+    padding-bottom: 50px;
+    color: white;
+    position: absolute;
+    top: 190px;
+    left: 52%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+.slide_one_text p {
+    font-family: 'Jost', sans-serif;
+    font-weight: 300;
+    font-size: 12px;
+    color: white;
+    position: absolute;
+    top: 345px;
+    left: 51%;
+    transform: translateX(-50%);
+    padding: 0 200px;
+    text-align: center;
+}
+
+.slide_one_text span {
+    font-family: 'Jost', sans-serif;
+    font-weight: 300;
+    font-size: 10px;
+    color: white;
+    position: absolute;
+    top: 165px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+.extra {
+    left: 51% !important;
+}
+
+.bnr_btn {
+    padding: 10px 25px;
+    border: 1px solid white;
+    color: white;
+    font-family: 'Jost', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    min-width: 200;
+    position: absolute;
+    top: 460px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: linear 0.4s;
+}
+
+.bnr_btn::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #2D282C;
+    z-index: -1;
+    transition: transform 0.5s;
+    transform-origin: 0 0;
+    transform: scaleX(0);
+    transition-timing-function: cubic-bezier(0.5, 1.6, 0.4, 0.7);
+}
+
+.bnr_btn:hover {
+    border: 1px solid #2D282C;
+}
+
+.bnr_btn:hover::before {
+    transform: scaleX(1);
+}
+
+/* banner text */
+/* Banner part end */
+/* Custom scroll bar start*/
+::-webkit-scrollbar {
+    width: 9px;
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: silver;
+    transition: 0.5s;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(124, 111, 83);
+}
+
+@supports (scrollbar-color: red blue) {
+    * {
+        scrollbar-color: rgb(124, 111, 83) silver;
+    }
+}
+
+/* Custom scroll bar end*/
+/* Css of later added parts start */
+/*Dropdown css start */
+.box {
+    padding: 5px 2px;
+    position: absolute;
+    top: 130px;
+    left: 240px;
+    background: white;
+    text-align: left;
+    border-radius: 10px;
+    display: none;
+    z-index: 999999;
+}
+
+.box ul {
+    padding: 10px 100px 10px 20px !important;
+}
+
+.box ul li a {
+    font-family: 'Jost', sans-serif;
+    color: black;
+}
+
+/*Dropdown css end */
+/* Nav hover effect Start */
+.nav_menuset_one ul li a::after {
+    position: absolute;
+    content: "";
+    height: 1px;
+    width: 0;
+    bottom: 0;
+    left: 0;
+    background: white;
+    transition: 0.4s;
+
+}
+
+.nav_menuset_one ul li a:hover:after {
+    width: 50px;
+}
+
+/* Nav hover effect end */
+/* Info slide css start */
+.info_slide {
+    height: 100%;
+    width: 40%;
+    background: white;
+    padding: 50px 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 999999999;
+    display: none;
+}
+
+.cross {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    padding: 10px;
+}
+
+.cross img {
+    width: 20px;
+    cursor: pointer;
+    transition: .4s;
+}
+
+.cross img:hover {
+    transform: rotate(180deg);
+}
+
+.info_slide_content {
+    padding-left: 40px;
+}
+
+.contact_part {
+    padding-right: 20px;
+}
+
+.contact_part h3 {
+    font-family: 'Jost', sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    padding-top: 20px;
+    padding-bottom: 15px;
+}
+
+.contact_part p {
+    padding-bottom: 10px;
+}
+
+.contact_part p a {
+    font-family: 'Jost', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: black;
+}
+
+.contact_part p i {
+    font-size: 18px;
+    padding-right: 15px;
+    color: rgb(97, 97, 97);
+}
+
+.social_part {
+    padding-top: 30px;
+}
+
+.social_part h3 {
+    font-family: 'Jost', sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    padding-top: 20px;
+}
+
+.dribble,
+.instgram,
+.facebook,
+.twitter {
+    display: inline-block;
+    padding-right: 35px;
+    padding-top: 20px;
+}
+
+.dribble i,
+.instgram i,
+.facebook i,
+.twitter i {
+    color: black;
+    font-size: 20px;
+}
+
+.info_slide_btn {
+    position: absolute;
+    top: 72px;
+    right: 56PX;
+}
+
+#info_btn {
+    background: transparent;
+    border: 0px;
+    z-index: 999999999;
+}
+
+.fa-bars {
+    color: white;
+    font-size: 27px;
+    z-index: 9999;
+    transition: 0.2s;
+}
+
+.fa-bars:hover {
+    font-size: 30px;
+}
+
+/* Info slide css end */
+/* Css of later added parts end */

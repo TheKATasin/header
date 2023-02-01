@@ -1,0 +1,90 @@
+@media (min-width: 320px) and (max-width: 575.98px) {
+    ul li {
+        display: inherit;
+        margin-left: 0px;
+        padding: 10px;
+        background: transparent;
+        transition: all .5s linear;
+    }
+
+    ul li:hover {
+        background: #fff;
+    }
+
+    ul li:hover a {
+        color: #000;
+    }
+
+    .logo {
+        float: none;
+    }
+
+    ul {
+        float: none;
+        padding: 0px;
+        margin-right: 0px;
+        background: #000;
+        border-radius: 3px;
+        transition: max-height 0.2s ease-out;
+        max-height: 0;
+        overflow: hidden;
+    }
+
+    ul li a {
+        color: rgba(255, 255, 255, 1);
+    }
+
+    .btn-toggle {
+        display: block;
+    }
+
+    .slide_one_text h1 {
+        padding-top: 62px;
+    }
+
+    .bnr_btn {
+        top: 560px;
+    }
+
+    .slide_one_text p {
+        top: 490px;
+        left: 50%;
+        margin-right: -100px;
+        padding: 0;
+    }
+    .slide {
+        background-position: center;
+    }
+    @keyframes slide{
+        100% {
+            background-size: 411%;
+        }
+        50% {
+            background-size: 375%;
+        }
+        0% {
+            background-size: 411%;
+        }
+    }
+    .box{
+        display: none !important;
+    }
+    .nav_menuset_one ul li a i{
+        display: none;
+    }
+    .nav_menuset_one ul li a::after{
+        display: none;
+    }
+    .change_bg {
+        padding: 0px 0 !important;
+    }
+    #header_part {
+        padding: 18px 0;
+    }
+    .logo_opacity{
+        opacity: 0;
+    }
+    .info_slide_btn{
+        display: none;
+    }
+}
